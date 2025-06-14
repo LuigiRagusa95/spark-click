@@ -1,0 +1,31 @@
+:root {
+  --spark-color: #282828;
+  --spark-z-index: 99999;
+}
+
+.cursor {
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  pointer-events: none;
+  z-index: var(--spark-z-index);
+  transform: translate(-50%, -50%);
+}
+
+.spark {
+  width: 10px;
+  height: 4px;
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: var(--spark-z-index);
+  background: var(--spark-color);
+}
+
+@media (prefers-reduced-motion) {
+  .spark {
+    display: none;
+  }
+}
